@@ -3,6 +3,7 @@ import { create } from "zustand";
 const useTodoStore = create((set) => ({
   task: "",
   tasks: [],
+
   changeHandler: (event) => {
     let valueInput = event.target.value;
     set((state) => ({ task: `${(state.task = valueInput)}` }));
